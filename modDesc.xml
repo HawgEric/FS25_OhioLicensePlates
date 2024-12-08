@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="92">
+    <author>Warthog Mods</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Ohio License Plate</en>
+    </title>
+    <description>
+        <en>
+            <![CDATA[            
+            Replaces the vehicle license plate on a map with Ohio plate style.
+]]>
+        </en>
+    </description>
+    <iconFilename>icon.dds</iconFilename>
+    <multiplayer supported="true" />
+
+    <extraSourceFiles>
+        <sourceFile filename="src/loadLicensePlates.lua"/>
+    </extraSourceFiles>
+</modDesc>

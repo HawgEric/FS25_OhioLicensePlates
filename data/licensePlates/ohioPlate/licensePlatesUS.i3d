@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="licensePlatesUS.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.1"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="5" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_diffuse.png"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_specular.png"/>
+    <File fileId="2" filename="$data/shared/licensePlates/licensePlates_normal.png"/>
+    <File fileId="3" filename="$data/shared/licensePlates/licensePlates_vmask.png"/>
+    <File fileId="12" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="1" filename="ohioPlate_diffuse.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="licensePlates_metalPainted_mat" materialId="5" customShaderId="4">
+      <Texture fileId="12"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="14"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <CustomParameter name="smoothnessScale" value="1.52"/>
+    </Material>
+    <Material name="licensePlates_metalPainted_mat2" materialId="7" customShaderId="4" customShaderVariation="vmaskUV2">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+    </Material>
+    <Material name="licensePlates_metalPainted_mat2" materialId="6" customShaderId="4" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="licensePlatesUS.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="square" rotation="-90 0 0" nodeId="11">
+      <TransformGroup name="symbols" rotation="1e-06 0 0" nodeId="12">
+        <TransformGroup name="letter01" translation="-0.106 -0.005544 0.001691" nodeId="13"/>
+        <TransformGroup name="letter02" translation="-0.069 -0.005544 0.001691" nodeId="14"/>
+        <TransformGroup name="letter03" translation="-0.032 -0.005544 0.001691" nodeId="15"/>
+        <TransformGroup name="letter04" translation="0.032 -0.005544 0.001691" nodeId="16"/>
+        <TransformGroup name="letter05" translation="0.069 -0.005544 0.001691" nodeId="17"/>
+        <TransformGroup name="letter06" translation="0.106 -0.005544 0.001691" nodeId="18"/>
+        <TransformGroup name="letter07" translation="0.106 -0.005544 0.001691" nodeId="19"/>
+        <TransformGroup name="letter08" translation="0.106 -0.005544 0.001691" nodeId="20"/>
+        <TransformGroup name="letter09" translation="0.106 -0.005544 0.001691" nodeId="21"/>
+      </TransformGroup>
+      <Shape name="squarePlate" shapeId="1" clipDistance="300" nodeId="22" castsShadows="true" receiveShadows="true" materialIds="7,6"/>
+      <Shape name="squareFrame" shapeId="2" clipDistance="300" nodeId="23" castsShadows="true" receiveShadows="true" materialIds="5"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>
