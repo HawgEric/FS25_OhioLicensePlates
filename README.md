@@ -2,7 +2,7 @@
 Script mod to change license plates in game to Ohio's actual license plate.  Once enabled the map license plate will be replaced when purchasing new vehicles.
 
 ## Releases
-All releases for this mod will be published on my <a href="https://warthogmods.itch.io/fs25-ohio-license-plates" target="_blank">itch.io</a> page.
+All releases for this mod will be published on my [itch.io](https://warthogmods.itch.io/fs25-ohio-license-plates) page.
 
 ## Installation Instructions
 1. Zip files of this mod can be found in the releases section of the repository on github.
